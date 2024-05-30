@@ -69,7 +69,9 @@ class HaystackKnowledgeBase:
     def retrieve_documents(self, query):
         # improve
         template = """
+        You are an expert Material Safety Document Analyser.
         Given the following information, answer the question.
+        Make sure there are full stops after every sentence.
 
         Context: 
         {% for document in documents %}
@@ -110,13 +112,17 @@ class HaystackKnowledgeBase:
     def run(self, query, output_file):
         start = perf_counter()
         self.preprocess_documents()
+        preprocessed_time = perf_counter() - start
         result = self.retrieve_documents(query)
-        elapsed_time = perf_counter() - start
-        self.save_result(result, output_file, elapsed_time)
-        print(result)
-        print(f"Haystack took: {elapsed_time} seconds")
-        result = result + "\n\n" + f"Haystack took: {elapsed_time} seconds"
-        return result
+        retrieval_time = perf_counter() - start - preprocessed_time
+        self.save_result(result, output_file, retrieval_time)
+        # print(result)
+        # print(f"Haystack took: {retrieval_time} seconds")
+        return result, [
+            f"Ingestion and Preprocessing Time: {preprocessed_time}",
+            f"Retrieval Time: {retrieval_time}",
+            f"Elapsed TIme: {preprocessed_time + retrieval_time}",
+        ]
 
 
 if __name__ == "__main__":

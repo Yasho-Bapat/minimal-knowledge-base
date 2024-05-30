@@ -9,7 +9,10 @@
 <body>
     <div class="container">
         <h1>Knowledge Base</h1>
-        <h2>Minimal Knowledge Base Implementation using Langchain and Haystack</h2>
+        <h2>Minimal KB Implementation in Haystack and Langchain</h2>
+        <div id="illustration">
+            <img src="../static/illustration.png" height="250px">
+        </div>
         <h3>Query: Give me detailed information about sulfuric acid based on the documents provided.</h3>
         <form action="/run" method="post" id="pipelineForm">
             <label>
@@ -32,7 +35,7 @@
                 <li id="step1">Ingestion (Uploading and Parsing (or OCR))</li>
                 <li id="step2">Processing (Cleaning, Splitting, Chunking and Embedding)</li>
                 <li id="step3">Storage (Vector Database)</li>
-                <li id="step4">Retrieval (Vector Database)</li>
+                <li id="step4">Retrieval</li>
                 <li id="step5">Response Generation (LLM)</li>
             </ul>
         </div>
@@ -56,15 +59,40 @@
             steps.style.display = 'block';
 
             setTimeout(() => {
-                statusText.textContent = 'Ingestion in process...';
+                statusText.textContent = 'Ingestion in process...(Uploading Documents)';
                 step1.classList.add('active');
-                progressBar.style.width = '25%';
+                progressBar.style.width = '5%';
             }, 0);
             setTimeout(() => {
-                statusText.textContent = 'Processing...';
+                statusText.textContent = 'Ingestion in process...(Scanning Documents)';
+                step1.classList.add('active');
+                progressBar.style.width = '15%';
+            }, 2000);
+            setTimeout(() => {
+                statusText.textContent = 'Ingestion in process...(Parsing Documents)';
+                step1.classList.add('active');
+                progressBar.style.width = '25%';
+            }, 3500);
+            setTimeout(() => {
+                statusText.textContent = 'Processing';
                 step2.classList.add('active');
-                progressBar.style.width = '50%';
+                progressBar.style.width = '30%';
+            }, 5000);
+            setTimeout(() => {
+                statusText.textContent = 'Processing...(cleaning documents)';
+                step2.classList.add('active');
+                progressBar.style.width = '40%';
+            }, 10000);
+            setTimeout(() => {
+                statusText.textContent = 'Processing...(splitting data)';
+                step2.classList.add('active');
+                progressBar.style.width = '55%';
             }, 15000);
+            setTimeout(() => {
+                statusText.textContent = 'Processing...(embedding and chunking splits)';
+                step2.classList.add('active');
+                progressBar.style.width = '70%';
+            }, 20000);
             setTimeout(() => {
                 statusText.textContent = 'Storing...';
                 step3.classList.add('active');
@@ -74,7 +102,7 @@
                 statusText.textContent = 'Retrieving...';
                 step4.classList.add('active');
                 progressBar.style.width = '75%';
-            }, 25000);
+            }, 30000);
             setTimeout(() => {
                 statusText.textContent = 'Generating response...';
                 step5.classList.add('active');

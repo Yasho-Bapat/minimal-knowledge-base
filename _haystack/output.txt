@@ -1,25 +1,11 @@
-Here is some detailed information extracted from the provided documents relating to sulfuric acid:
+Here is some detailed information about Sulfuric Acid, based on the documents provided and sourced.
 
-1. Chemical Name and CAS No: The Chemical name is Sulfuric Acid (7664-93-9). It is a corrosive chemical and comes with the following warnings: Corrosive to metals, causes severe skin burns and eye damage, and is harmful to aquatic life. Avoid releasing this chemical into the environment. 
+Sulfuric Acid is a highly corrosive liquid that can cause severe burns and eye damage. It is also a strong oxidant, meaning it can react with other substances to cause combustion. It is advised to avoid exposure to skin and eyes, and to seek immediate medical attention in case of such exposure. It is recommended to wear protective clothing and eye protection when handling Sulfuric Acid.
 
-2. Emergency Phone and CHEMTREC: In case of a sulfuric acid emergency, you can reach the CHEMTREC International at 703-527-3887 or the Rooto Corporation at 1-517-546-8330. 
+In the event of a fire, it is important to move the container away from the fire if it is safe to do so. Additionally, Sulfuric Acid can produce toxic gases when it decomposes, so it is important to wear respiratory protection when handling it. 
 
-3. First Aid Measures: If adverse effects occur, remove to an uncontaminated area. Consider oxygen if the victim has suffered inhalation exposure. For skin or eye exposure, rinse with water thoroughly. 
+Though not mentioned in the provided documents, It's worth noting that sulfuric acid is also known to be a strong electrolyte, meaning it ionizes completely in water. This property is fundamental in its application in battery production, as well as its environmental implications following improper disposal. 
 
-4. Hazard Ratings and GHS Hazards: Sulfuric acid is rated as a "1A" for skin corrosion and "1" for being a corrosive metal. It has the following GHS hazards: H290, H314, H350, H370, H372, and H402. 
+For any additional information or specific safety protocols regarding Sulfuric Acid, it is best to consult local safety experts or the material safety data sheet (SDS) for Sulfuric Acid, since specific details may vary by jurisdiction.
 
-5. Composition and Information on Ingredients: Sulfuric acid is a blend of multiple ingredients and has a specific gravity of .959. 
-
-6. Physical and Chemical Characteristics: Sulfuric acid has a boiling point of 156-212 degrees F and a vapor pressure of  No Data. Its evaporation rate is 1 and it is soluble in water. 
-
-7. Reactivity Data: Sulfuric acid is stable at room temperature but should still be avoided with heat, chlorine, iodine, hypochlorite, and mineral acids as there is a risk of violent reactions that may release irritating or toxic gases. 
-
-8. Health Hazards: Inhalation of mild sulfuric acid vapor may cause irritation to the nose, throat, coughing, or sneezing. More significant exposure may lead to respiratory irritation, dyspnea, and pulmonary edema. It is an eye and skin irritant and is toxic when ingested. Ingestion may also cause excessive salvation, nausea, vomiting, and gastric irritation. 
-
-9. Carcinogenicity: Long-term exposure to sulfuric acid may cause cancer. 
-
-10. Emergency Measures: In case of a fire, move the container away from the fire if possible without risk. Cool the containers with a water spray until the fire is completely out. Damaged cylinders should be handled by specialists only. 
-
-Please note that the information provided is concise, and you can request more detailed information about any of the sections listed above.
-
-Haystack took: 52.72508933395147 seconds
+Haystack took: 11.484933750005439 seconds

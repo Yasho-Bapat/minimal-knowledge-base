@@ -1,17 +1,13 @@
-According to the provided documents, here is the detailed information about sulfuric acid:
+Sulfuric acid is an ingredient in the product with the following details:
 
 - Chemical Name: Sulfuric Acid
-- CAS Number: 7664-93-9
-- Exposure Limits:
-    - OSHA: 1 mg/m3 TWA
-    - ACGIH: 0.2 mg/m3 TWA (thoracic fraction)
-    - NIOSH: 1 mg/m3 TWA
-- It is recommended for industrial use.
-- The product is harmful if swallowed, fatal if it comes in contact with the skin, and may be corrosive to metals.
-- The aquatic toxicity level is A1, and the acute toxicity level is <= 1.00 mg/L.
-- It has GHS hazards and precautions, including being corrosive and causing severe skin burns, eye damage, and harm if swallowed.
-- Sulfuric acid has a flash point and is considered non-flammable with flammable limits of -16% (LEL) and -27% (UEL).
+- CAS No.: 7664-93-9 
+- OSHA Exposure Limits: 1 mg/m3 TWA
+- ACGIH Exposure Limits: 0.2 mg/m3 TWA (thoracic fraction)
+- NIOSH: 1 mg/m3 TWA
 
-Overall, sulfuric acid is a hazardous substance that requires careful handling and personal protective equipment.
+It is also mentioned that the product, Acid, Sulfuric 66 Degree "WT" contains 90 to 100% of Sulfuric acid. Furthermore, the aquatic toxicity of Sulfuric acid is mentioned as A1, and its acute toxicity is <= 1.00 mg/l.
 
-Langchain took: 53.81728329206817 seconds
+The material safety document also warns about the corrosive nature of Sulfuric acid, highlighting that it can cause severe skin burns and eye damage. Inhalation of Sulfuric acid can also lead to adverse health effects.
+
+Langchain took: 2.719458834035322 seconds

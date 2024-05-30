@@ -7,6 +7,8 @@ from fastapi.staticfiles import StaticFiles
 from _haystack.minimal_KB import HaystackKnowledgeBase
 from _langchain.minimal_KB import LangchainKnowledgeBase
 
+dotenv.load_dotenv()
+
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
@@ -24,23 +26,34 @@ async def run_pipeline(request: Request, pipeline: str = Form(...)):
     if pipeline == "haystack":
         kb = HaystackKnowledgeBase(
             docs_dir="../docs/",
-            azure_api_key="ba4c5c522b134b5c8e0728f8a4264003",
-            cohere_api_key="VZsa4drkzj1Di2ki7n8nboLHuFQg3y7m03ktlFpf",
-            endpoint="https://anonymus-manatee.cognitiveservices.azure.com/",
+            azure_api_key=os.getenv("AZURE_API_KEY"),
+            cohere_api_key=os.getenv("COHERE_API_KEY"),
+            endpoint=os.getenv("ENDPOINT"),
         )
-        result = kb.run(query=query, output_file="output_haystack.txt")
+        result, time = kb.run(query=query, output_file="../_haystack/output.txt")
     elif pipeline == "langchain":
         kb = LangchainKnowledgeBase(
             docs_dir="../docs/",
-            cohere_api_key="VZsa4drkzj1Di2ki7n8nboLHuFQg3y7m03ktlFpf",
-            azure_api_key="ba4c5c522b134b5c8e0728f8a4264003",
-            endpoint="https://anonymus-manatee.cognitiveservices.azure.com/",
+            azure_api_key=os.getenv("AZURE_API_KEY"),
+            cohere_api_key=os.getenv("COHERE_API_KEY"),
+            endpoint=os.getenv("ENDPOINT"),
         )
-        result = kb.run(query=query, output_file="output_langchain.txt")
+        result, time = kb.run(query=query, output_file="../_langchain/output.txt")
 
     return templates.TemplateResponse(
-        "result.html", {"request": request, "result": result}
+        "result.html",
+        {
+            "request": request,
+            "framework": pipeline,
+            "result": result.split(". "),
+            "time": time,
+        },
     )
+
+
+@app.post("/requery")
+async def requery(query: str = Form(...)):
+    pass
 
 
 if __name__ == "__main__":

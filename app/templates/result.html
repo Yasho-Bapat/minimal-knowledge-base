@@ -5,15 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
     <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+            overflow-y: auto;
+            max-height: 95vh;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .result-details {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin: 5px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Knowledge Base</h1>
-        <h2>Minimal Knowledge Base Implementation using Langchain and Haystack</h2>
+        <h2>Minimal Knowledge Base Implementation using <b><u>{{ framework }}</u></b></h2>
         <h3>Query: Give me detailed information about sulfuric acid based on the documents provided.</h3>
-        <h2>Result: </h2>
-        <p>{{ result }}</p>
-        <a href="/">Go back</a>
+        <h2>Result:</h2>
+        {% for item in result %}
+        <div class="result-details">
+            {{ item | safe }}
+        </div>
+        {% endfor %}
+
+        <h2>Time Required:</h2>
+        {% for t in time %}
+        <div class="result-details">
+            {{ t | safe }}
+            <br>
+        </div>
+        {% endfor %}
+        <a href="/" class="back-link">Go back</a>
     </div>
 </body>
 </html>

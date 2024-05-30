@@ -43,9 +43,10 @@ class LangchainKnowledgeBase:
     def query_documents(self, query, k=10):
         docs = self.db.similarity_search(query, k)
         result = self.llm.invoke(
-            f"Context: {[doc.page_content for doc in docs]} "
+            f"You are an expert Material Safety Document Analyser."
+            + f"Context: {[doc.page_content for doc in docs]} "
             + "using only this context, answer the following question: "
-            + f"Question: {query}"
+            + f"Question: {query}. Make sure there are full stops after every sentence."
         )
         return result.content
 
@@ -58,13 +59,17 @@ class LangchainKnowledgeBase:
         self.load_documents()
         self.preprocess_documents()
         self.embed_documents()
+        preprocessed_time = perf_counter() - start
         result = self.query_documents(query)
-        elapsed_time = perf_counter() - start
-        self.save_result(result, output_file, elapsed_time)
-        print(result)
-        print(f"Langchain took: {elapsed_time} seconds")
-        result = result + "\n\n" + f"Langchain took: {elapsed_time} seconds"
-        return result
+        retrieval_time = perf_counter() - start - preprocessed_time
+        self.save_result(result, output_file, retrieval_time)
+        # print(result)
+        # print(f"Langchain took: {retrieval_time} seconds")
+        return result, [
+            f"Ingestion and Preprocessing Time: {preprocessed_time}",
+            f"Retrieval Time: {retrieval_time}",
+            f"Elapsed TIme: {preprocessed_time + retrieval_time}",
+        ]
 
 
 if __name__ == "__main__":
