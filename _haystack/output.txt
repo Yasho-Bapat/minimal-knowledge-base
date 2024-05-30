@@ -1,0 +1,25 @@
+Here is some detailed information extracted from the provided documents relating to sulfuric acid:
+
+1. Chemical Name and CAS No: The Chemical name is Sulfuric Acid (7664-93-9). It is a corrosive chemical and comes with the following warnings: Corrosive to metals, causes severe skin burns and eye damage, and is harmful to aquatic life. Avoid releasing this chemical into the environment. 
+
+2. Emergency Phone and CHEMTREC: In case of a sulfuric acid emergency, you can reach the CHEMTREC International at 703-527-3887 or the Rooto Corporation at 1-517-546-8330. 
+
+3. First Aid Measures: If adverse effects occur, remove to an uncontaminated area. Consider oxygen if the victim has suffered inhalation exposure. For skin or eye exposure, rinse with water thoroughly. 
+
+4. Hazard Ratings and GHS Hazards: Sulfuric acid is rated as a "1A" for skin corrosion and "1" for being a corrosive metal. It has the following GHS hazards: H290, H314, H350, H370, H372, and H402. 
+
+5. Composition and Information on Ingredients: Sulfuric acid is a blend of multiple ingredients and has a specific gravity of .959. 
+
+6. Physical and Chemical Characteristics: Sulfuric acid has a boiling point of 156-212 degrees F and a vapor pressure of  No Data. Its evaporation rate is 1 and it is soluble in water. 
+
+7. Reactivity Data: Sulfuric acid is stable at room temperature but should still be avoided with heat, chlorine, iodine, hypochlorite, and mineral acids as there is a risk of violent reactions that may release irritating or toxic gases. 
+
+8. Health Hazards: Inhalation of mild sulfuric acid vapor may cause irritation to the nose, throat, coughing, or sneezing. More significant exposure may lead to respiratory irritation, dyspnea, and pulmonary edema. It is an eye and skin irritant and is toxic when ingested. Ingestion may also cause excessive salvation, nausea, vomiting, and gastric irritation. 
+
+9. Carcinogenicity: Long-term exposure to sulfuric acid may cause cancer. 
+
+10. Emergency Measures: In case of a fire, move the container away from the fire if possible without risk. Cool the containers with a water spray until the fire is completely out. Damaged cylinders should be handled by specialists only. 
+
+Please note that the information provided is concise, and you can request more detailed information about any of the sections listed above.
+
+Haystack took: 52.72508933395147 seconds

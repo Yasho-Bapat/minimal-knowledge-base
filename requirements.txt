@@ -1,0 +1,13 @@
+pypdf
+langchain-community
+haystack-ai
+langchain
+sentence-transformers>=2.2.0
+azure-ai-documentintelligence
+azure-ai-formrecognizer
+langchain_chroma
+pypdf
+cohere-haystack
+python-dotenv~=1.0.1
+fastapi
+uvicorn

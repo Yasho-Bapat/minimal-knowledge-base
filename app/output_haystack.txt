@@ -1,0 +1,31 @@
+Sulfuric acid is a corrosive liquid with a specific gravity of .959. It is a highly toxic substance with the following hazards:
+
+- Corrosive to metals
+- Inhalation toxicity acute level 2
+- Skin corrosion category 1A
+- Eye corrosion category 1
+- Carcinogen category 1B
+- Organ toxin single exposure category 1
+- Organ toxin repeated exposure category 1
+- Aquatic toxicity category 3
+
+In the event of an accident, or if you feel unwell, seek medical advice immediately. 
+
+In the event of an emergency, you can call the ChemTrec international line at 703-527-3887. 
+
+To combat some of the effects of sulfuric acid, you may use the following first aid measures: 
+
+- Remove yourself or the victim to fresh air, and keep at rest in a position comfortable for breathing.
+- Rinse mouth if swallowed. Do not induce vomiting.
+- Rinse skin with water/shower if the skin (or hair) comes into contact. 
+- Rinse cautiously with water for several minutes if in the eyes. 
+
+In the case of ingestion or inhalation, consult a poison center or doctor/physician. 
+
+Ensure you wear personal protective equipment such as protective gloves, clothing, eye, and face protection when working with sulfuric acid. Additionally, use respiratory protection if working with it indoors. 
+
+You may absorb spillage to prevent material damage and prevent release to the environment. 
+
+Overall, it is clear that sulfuric acid needs to be handled with care due to its corrosive nature, and exposure to it should be avoided wherever possible.
+
+Haystack took: 43.995472999988124 seconds

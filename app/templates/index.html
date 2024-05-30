@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Knowledge Base</h1>
+        <h2>Minimal Knowledge Base Implementation using Langchain and Haystack</h2>
+        <h3>Query: Give me detailed information about sulfuric acid based on the documents provided.</h3>
+        <form action="/run" method="post" id="pipelineForm">
+            <label>
+                <input type="radio" name="pipeline" value="haystack" required> Haystack
+            </label>
+            <label>
+                <input type="radio" name="pipeline" value="langchain" required> LangChain
+            </label>
+            <button type="submit">Run</button>
+        </form>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="loader" id="loader" style="display:none;"></div>
+        <p id="status-text" style="display:none;">Starting...</p>
+        <p>Average Wait Time: 50 - 60 seconds</p>
+        <div class="steps" id="steps" style="display:none;">
+            <h3>Processing Steps:</h3>
+            <ul>
+                <li id="step1">Ingestion (Uploading and Parsing (or OCR))</li>
+                <li id="step2">Processing (Cleaning, Splitting, Chunking and Embedding)</li>
+                <li id="step3">Storage (Vector Database)</li>
+                <li id="step4">Retrieval (Vector Database)</li>
+                <li id="step5">Response Generation (LLM)</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById('pipelineForm');
+        const loader = document.getElementById('loader');
+        const statusText = document.getElementById('status-text');
+        const steps = document.getElementById('steps');
+        const progressBar = document.getElementById('progress-bar');
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        const step3 = document.getElementById('step3');
+        const step4 = document.getElementById('step4');
+        const step5 = document.getElementById('step5');
+
+        form.addEventListener('submit', function() {
+            loader.style.display = 'block';
+            statusText.style.display = 'block';
+            statusText.textContent = 'Starting...';
+            steps.style.display = 'block';
+
+            setTimeout(() => {
+                statusText.textContent = 'Ingestion in process...';
+                step1.classList.add('active');
+                progressBar.style.width = '25%';
+            }, 0);
+            setTimeout(() => {
+                statusText.textContent = 'Processing...';
+                step2.classList.add('active');
+                progressBar.style.width = '50%';
+            }, 15000);
+            setTimeout(() => {
+                statusText.textContent = 'Storing...';
+                step3.classList.add('active');
+                progressBar.style.width = '75%';
+            }, 25000);
+            setTimeout(() => {
+                statusText.textContent = 'Retrieving...';
+                step4.classList.add('active');
+                progressBar.style.width = '75%';
+            }, 25000);
+            setTimeout(() => {
+                statusText.textContent = 'Generating response...';
+                step5.classList.add('active');
+                progressBar.style.width = '100%';
+            }, 40000);
+        });
+    </script>
+</body>
+</html>
