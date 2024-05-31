@@ -2,7 +2,10 @@ import os
 from time import perf_counter
 import dotenv
 
-from langchain_community.document_loaders import AzureAIDocumentIntelligenceLoader
+from langchain_community.document_loaders import (
+    AzureAIDocumentIntelligenceLoader,
+    PyPDFLoader,
+)
 from langchain_cohere import ChatCohere, CohereEmbeddings
 from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -16,7 +19,7 @@ class LangchainKnowledgeBase:
         self.cohere_api_key = cohere_api_key
         self.docs_dir = docs_dir
         self.endpoint = endpoint
-        self.azure_api_key = azure_api_key
+        # self.azure_api_key = azure_api_key
         self.embedding_function = (
             CohereEmbeddings()
         )  # Function to embed documents using Cohere API
@@ -25,17 +28,30 @@ class LangchainKnowledgeBase:
         )  # Language model from Cohere for generating responses
         self.documents = []  # Placeholder for loaded documents
 
+    # def load_documents(self):
+    #     # Load documents from the specified directory using Azure AI Document Intelligence
+    #     file_paths = [self.docs_dir + file for file in os.listdir(self.docs_dir)]
+    #     for file_path in file_paths:
+    #         loader = AzureAIDocumentIntelligenceLoader(
+    #             api_endpoint=self.endpoint,
+    #             api_key=self.azure_api_key,
+    #             file_path=file_path,
+    #             api_model="prebuilt-layout",
+    #         )
+    #         self.documents.extend(loader.load())  # Load documents and add to the list
+
     def load_documents(self):
-        # Load documents from the specified directory using Azure AI Document Intelligence
-        file_paths = [self.docs_dir + file for file in os.listdir(self.docs_dir)]
+        # Loading documents from the specified directory using LangChain's PyPDFLoader
+        file_paths = [
+            os.path.join(self.docs_dir, file)
+            for file in os.listdir(self.docs_dir)
+            if file.endswith(".pdf")
+        ]
+
         for file_path in file_paths:
-            loader = AzureAIDocumentIntelligenceLoader(
-                api_endpoint=self.endpoint,
-                api_key=self.azure_api_key,
-                file_path=file_path,
-                api_model="prebuilt-layout",
-            )
-            self.documents.extend(loader.load())  # Load documents and add to the list
+            loader = PyPDFLoader(file_path)
+            documents = loader.load()
+            self.documents.extend(documents)
 
     def preprocess_documents(self):
         # Preprocess documents by splitting them into smaller chunks
@@ -51,6 +67,9 @@ class LangchainKnowledgeBase:
     def query_documents(self, query, k=10):
         # Query the embedded documents and generate a response using the language model
         docs = self.db.similarity_search(query, k)  # Retrieve top-k similar documents
+
+        print([doc.page_content for doc in docs])
+
         result = self.llm.invoke(
             f"You are an expert Material Safety Document Analyser."
             + f"Context: {[doc.page_content for doc in docs]} "

@@ -22,7 +22,7 @@ async def read_root(request: Request):
 
 @app.post("/run")
 async def run_pipeline(request: Request, pipeline: str = Form(...)):
-    query = "Give me detailed information about sulfuric acid based on the documents provided."
+    query = "Give me detailed information about copper sulphate based on the documents provided."
     if pipeline == "haystack":
         kb = HaystackKnowledgeBase(
             docs_dir="../docs/",

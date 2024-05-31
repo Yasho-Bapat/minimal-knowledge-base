@@ -1,13 +1,7 @@
-Sulfuric acid is an ingredient in the product with the following details:
+Copper(II) sulfate pentahydrate, also known as Blue Vitriol, comes in various forms, such as crystalline, powder, granular, and technical grades. It is primarily recommended for use in laboratories. 
 
-- Chemical Name: Sulfuric Acid
-- CAS No.: 7664-93-9 
-- OSHA Exposure Limits: 1 mg/m3 TWA
-- ACGIH Exposure Limits: 0.2 mg/m3 TWA (thoracic fraction)
-- NIOSH: 1 mg/m3 TWA
+The substance has potential health hazards, and one should avoid dust formation and use it away from incompatible products and excess heat. Copper(II) sulfate pentahydrate decomposes into sulfur oxides and copper oxides, which are harmful if exposed to high levels. The recommended exposure limit is a time-weighted average (TWA) of 1mg/m3. 
 
-It is also mentioned that the product, Acid, Sulfuric 66 Degree "WT" contains 90 to 100% of Sulfuric acid. Furthermore, the aquatic toxicity of Sulfuric acid is mentioned as A1, and its acute toxicity is <= 1.00 mg/l.
+This chemical should be kept away from strong oxidizing agents due to its incompatible nature with such materials. Ensure proper ventilation and follow safety guidelines when handling this product.
 
-The material safety document also warns about the corrosive nature of Sulfuric acid, highlighting that it can cause severe skin burns and eye damage. Inhalation of Sulfuric acid can also lead to adverse health effects.
-
-Langchain took: 2.719458834035322 seconds
+Langchain took: 2.1462499171029776 seconds

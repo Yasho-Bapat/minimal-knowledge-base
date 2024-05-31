@@ -3,7 +3,7 @@ from time import perf_counter
 import dotenv
 
 from haystack.components.writers import DocumentWriter
-from haystack.components.converters import AzureOCRDocumentConverter
+from haystack.components.converters import AzureOCRDocumentConverter, PyPDFToDocument
 from haystack.components.preprocessors import DocumentSplitter, DocumentCleaner
 from haystack import Pipeline
 from haystack.components.builders import PromptBuilder
@@ -47,11 +47,15 @@ class HaystackKnowledgeBase:
         preprocessing_pipeline = Pipeline()
 
         # Component 1: Convert PDF documents to text using Azure OCR
+        # preprocessing_pipeline.add_component(
+        #     "converter",
+        #     AzureOCRDocumentConverter(
+        #         endpoint=self.endpoint, api_key=Secret.from_token(self.azure_api_key)
+        #     ),
+        # )
         preprocessing_pipeline.add_component(
             "converter",
-            AzureOCRDocumentConverter(
-                endpoint=self.endpoint, api_key=Secret.from_token(self.azure_api_key)
-            ),
+            PyPDFToDocument(),
         )
 
         # Component 2: Clean the text by removing unnecessary elements

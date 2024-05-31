@@ -1,11 +1,68 @@
-Here is some detailed information provided in the material safety data sheet (MSDS) about sulfuric acid: 
+Here is some detailed information about copper sulfate based on the documents provided:
 
-1. Sulfuric acid is a highly corrosive liquid that can cause severe burns and eye damage. Wearing protective gloves, clothing, and eye protection is extremely important when handling this chemical.
-2. In the event of inhalation, remove the victim to fresh air and keep them resting in a position that is comfortable for breathing. 
-3. In case of skin contact or eye contact, immediately remove all contaminated clothing and rinse the affected area thoroughly with water. 
-4. Sulfuric acid is harmful to aquatic life and can cause severe damage if released into the environment. 
-5. This chemical is a known carcinogen and can cause damage to organs through prolonged or repeated exposure. 
+1. Identification:
+- Product Name: Cupric sulfate pentahydrate
+- Synonyms: Copper(II) sulfate pentahydrate; Blue vitriol
+- CAS Numbers: 7758-99-8 and 7758-98-7 
 
-Please note that this chemical should be handled with extreme caution as the potential for serious injury or death is high.  If you have any further questions or concerns about this chemical, please contact the Emergency Contact Number provided on the MSDS.
+2. Physical and Chemical Properties:
+- Molecular Formula: CuO4S.5H2O
+- Molecular Weight: 249.68
+- Solubility: Soluble in water
+- Partition Coefficient: No data available
+- Autoignition Temperature: Not applicable
+- Decomposition Temperature: No information available
+- Viscosity: Not applicable
 
-Haystack took: 9.61864058393985 seconds
+3. Stability and Reactivity:
+- Stability: Stable under normal conditions
+- Conditions to Avoid: Avoid dust formation.
+- Reactive Hazard: None known, based on information available. 
+
+4. Toxicity:
+- Acute Toxicity:
+- Oral LD50: 1,278 mg/kg
+- Dermal LD50: 2,740 mg/kg (Rabbit)
+- Inhalation: Not listed
+- Eye Contact: Rinse immediately with plenty of water, also under the eyelids, for at least 15 minutes.
+- Obtain medical attention.
+- Delayed and Immediate Effects: Irritation to eyes and skin 
+
+5. First Aid Measures:
+- General Advice: If symptoms persist, call a physician.
+
+6. Hazardous Combustion Products:
+- Sulfur oxides
+- Copper oxides
+
+7. Incompatible Materials:
+- Acids
+- Organic chemicals
+- Nitrocarbons
+- Halocarbons
+- Active metals and their alloys, leather, and wool.
+- Contact with acids and active metals may produce flammable hydrogen gas. 
+
+8. Ecological Information:
+- Trade Secret: 96hr LC50: Oncorhynchus mykiss >100 mg/L. 
+- 48hr EC50: Water flea >100 mg/L. 
+
+9. Transport Information:
+- UN1760, Corrosive Liquid, N.
+
+10. Regulation and Transport Information:
+- TSCA 12(b): Not applicable.
+- SARA 313: Not applicable.
+- California Proposition 65: This product does not contain any Proposition 65 chemicals.
+- OSHA: Not applicable.
+
+11. Storage and Disposal:
+- Keep container tightly closed.
+- Store locked up.
+- Dispose of contents/container to an approved waste disposal plant.
+- Avoid release to the environment. Inform the relevant authorities in case of spills, leaks, or
+emptying of containers.
+
+This information is sourced from the material safety data sheet for cupric sulfate pentahydrate, and other sources.
+
+Haystack took: 24.99358733301051 seconds
